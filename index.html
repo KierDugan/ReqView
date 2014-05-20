@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <link rel="stylesheet" href="reqview.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="reqview.js"></script>
+    <title>ReqView - simple HTTP request testbench</title>
+</head>
+
+<body>
+
+<div id="header">
+    <h1><span class="titleReq">Req</span><span class="titleView">View</span></h1>
+</div>
+
+<div id="content">
+<div class="leftcol">
+    <div id="request">
+        <p>
+            Fill in the details below and click the GO button to send a request.
+            The result will appear in the pane to the right.
+        </p>
+        <form id="requestForm">
+            <ul>
+                <li>
+                    <div class="formlabel">
+                        <label for="urlText">URL</label>
+                    </div>
+                    <div class="formfield">
+                        <input type="text" name="url" id="urlText" value="http://www.kierdugan.com/reqview/simple/">
+                    </div>
+                </li>
+                <li>
+                    <!--<fieldset>
+                        <legend>Method</legend>-->
+                    <div class="formlabel">
+                        <label>Method</label>
+                    </div>
+                    <div class="formfield">
+                        <input type="radio" id="methodGet" name="method" value="get" checked="checked">
+                        <label for="methodGet">GET</label>
+                        <input type="radio" id="methodPost" name="method" value="post">
+                        <label for="methodPost">POST</label>
+                        <input type="radio" id="methodPut" name="method" value="put">
+                        <label for="methodPut">PUT</label>
+                        <input type="radio" id="methodDelete" name="method" value="delete">
+                        <label for="methodDelete">DELETE</label>
+                    </div>
+                    <!--</fieldset>-->
+                </li>
+                <li>
+                    <div class="formlabel">
+                        <label for="requestBody">Request body</label>
+                    </div>
+                    <div class="formfield">
+                        <textarea id="requestBody" name="body"></textarea>
+                    </div>
+                </li>
+            </ul>
+            <div class="formbuttons">
+                <input type="submit" class="submitButton" value="GO">
+                <input type="reset" class="resetButton" value="Clear">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="rightcol">
+    <div id="view">
+        <div class="response">Response will appear here.</div>
+    </div>
+</div>
+</div>
+    
+</body>
+
+</html>
+
